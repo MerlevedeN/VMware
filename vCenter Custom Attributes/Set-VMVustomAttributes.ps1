@@ -21,10 +21,9 @@ foreach ($server in $servers){
 
     Write-host "   Set Attributes for $($server.VMName)" -ForegroundColor Yellow -NoNewline
     $vm = Get-VM -Name $server.VMName
-    $vm | Set-Annotation -CustomAttribute "SR" -Value $server.SR  | Out-Null
+    $vm | Set-Annotation -CustomAttribute "Service_Request" -Value $server.SR  | Out-Null
     $vm | Set-Annotation -CustomAttribute "Requestor" -Value $server.Requester | Out-Null
     $vm | Set-Annotation -CustomAttribute "Server_Purpose" -Value $server.Description  | Out-Null
-    $vm | Set-Annotation -CustomAttribute "Support_Team" -Value $server.Support  | Out-Null
     $vm | Set-Annotation -CustomAttribute "Deploy_date" -Value $server.Install  | Out-Null
     Write-host "  => Attributes Set" -ForegroundColor DarkGreen
 }
