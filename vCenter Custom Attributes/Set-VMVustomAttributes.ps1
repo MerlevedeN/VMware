@@ -2,7 +2,7 @@
 $ErrorActionPreference = "Stop"
 
 $cred = Get-Credential -Message "Please enter your vCenter Credentials"
-$vCenter = "pod-120-vcenter.sddc.lab"
+$vCenter = "vCenterName"
 
 try {
     Connect-VIServer $vCenter -Credential $cred | Out-Null
@@ -29,7 +29,7 @@ foreach ($server in $servers){
 }
 
 try {
-    Disconnect-VIServer pod-120-vcenter.sddc.lab -Confirm:$false
+    Disconnect-VIServer $vCenter -Confirm:$false
     Write-host "Disconnected from $($vCenter)" -ForegroundColor Green
 }
 catch {
