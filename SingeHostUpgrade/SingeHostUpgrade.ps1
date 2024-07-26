@@ -1,3 +1,12 @@
+#
+#   Version:        1.0
+#   Author:         MerlevedeN - https://github.com/MerlevedeN
+#
+#   Creation Date:  2024/07/26
+#   Purpose/Change: This script creates a custom ESXi upgrade image with the net-community-driver. Uploads it to the single host and upgrade the host.
+#
+#   Change: <DATE> : <CHANGE> (Also change Version)
+#   Change: 2024/07/26 : Creation
 
 # Variables
 $SingleHost = "<Host IP>"
