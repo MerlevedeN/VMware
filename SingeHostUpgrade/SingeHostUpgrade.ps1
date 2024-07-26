@@ -76,7 +76,6 @@ Write-Host "Uploading bundle to datastore..." -ForegroundColor Yellow
 $datastore = Get-Datastore
 Copy-DatastoreItem -Item "$($build)-standard-NUC.zip" -Destination $datastore.DatastoreBrowserPath
 
-
 # Run esxcli with powercli
 Write-Host "Creating update bundle..." -ForegroundColor Yellow
 $esxcli = get-esxcli -VMHost $singlehost -v2
